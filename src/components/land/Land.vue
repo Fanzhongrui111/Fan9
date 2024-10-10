@@ -50,8 +50,8 @@ import { useRouter } from "vue-router";
 
 // 不需要 export default
 const router = useRouter();
-const username = ref("");
-const password = ref("");
+const username = ref("seeleabd@163.com");
+const password = ref("123456789");
 const agree = ref(false);
 const loading = ref(false);
 
@@ -75,11 +75,11 @@ const login = async () => {
     params.append("password", password.value);
     params.append(
       "client_id",
-      "4f9f33c8de072c6254a5d5d2d2e5990b0d2fa6c9308ff459599bb1d75599ac6f"
+      "b4b978d1d3404c56ec215a7376d6ee6bde1ebf687bad14be2495b72eac3dd78b"
     ); //  ID
     params.append(
       "client_secret",
-      "a9b8dea038f275ec362d8fb791325d04945da43978c7e63ef164a4115ab6e52c"
+      "feb118585f5c5a80f927143cc312724c92359721075ee417e237eb1eb893728d"
     ); //  Secret
     params.append("scope", "user_info projects issues");
 
@@ -92,14 +92,12 @@ const login = async () => {
     const token = response.data.access_token;
     localStorage.setItem("oauth_token", token);
     console.log("登录成功，获取到了访问令牌！");
-
-    // 登录成功后跳转到主页（示例）
+    router.push("/home"); 
   } catch (error) {
     const errorMessage = error.response
       ? error.response.data.error_description
       : error.message;
     console.log("登录失败: " + errorMessage);
-    router.push("/home"); //登陆失败也跳转
   } finally {
     loading.value = false; // 不论成功或失败，都要恢复按钮状态
   }
