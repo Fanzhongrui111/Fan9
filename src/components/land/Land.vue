@@ -2,7 +2,8 @@
   <div class="flex">
     <img src="/imgs/2.png" />
     <div class="w-full md:w-2/3 text-center space-y-6">
-      <p class="text-2xl font-semibold text-gray-800">登入即刻创造你的应用</p>
+      <h1>网易云信</h1>
+        <p>登录，即刻创造您的应用</p>
       <div class="flex flex-col space-y-4">
         <input
           type="text"
@@ -107,11 +108,13 @@ const login = async () => {
 
 <style scoped>
 img {
-  width: 550px;
-  object-fit: fill;
+  /* width: 550px;
+  object-fit: fill; */
+  width: 45%; /* 保持图片宽度为视口的45% */
+  object-fit: cover;
 }
 .flex {
-  display: flex; /* 启用 flexbox 布局 */
-  align-items: center; /* 垂直居中对齐 */
+  display: flex; 
+  align-items: center;
 }
 </style>
