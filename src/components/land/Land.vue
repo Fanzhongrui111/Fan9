@@ -51,7 +51,7 @@ import { useRouter } from "vue-router";
 // 不需要 export default
 const router = useRouter();
 const username = ref("seeleabd@163.com");
-const password = ref("123456789");
+const password = ref("Fanzhong1028");
 const agree = ref(false);
 const loading = ref(false);
 
