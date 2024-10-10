@@ -1,8 +1,6 @@
 import axios from "axios";
-// import localforage from "localforage";
-// import { showFailToast } from "vant";
 
 const request = axios.create({
-  baseURL: "https://wangyiyun-teal.vercel.app",
+  baseURL: "https://gitee.com/api/v5",
 });
 export default request;

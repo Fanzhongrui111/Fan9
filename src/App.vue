@@ -1,6 +1,9 @@
-<template>
-  <Login></Login>
-</template>
 <script setup>
-import Login from "./components/Login.vue";
+import { RouterLink, RouterView } from "vue-router";
 </script>
+
+<template>
+  <RouterView />
+</template>
+
+<style scoped></style>

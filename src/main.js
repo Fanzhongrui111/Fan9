@@ -1,7 +1,7 @@
 import { createApp } from "vue";
-import "@/style.css";
-import "vant/lib/index.css";
+import "./style.css";
 import { Icon } from "@iconify/vue";
-import App from "@/App.vue";
+import router from "./router";
+import App from "./App.vue";
 
-createApp(App).use(Icon).mount("#app");
+createApp(App).use(Icon).use(router).mount("#app");
