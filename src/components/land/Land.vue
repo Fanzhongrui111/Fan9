@@ -50,8 +50,8 @@ import { useRouter } from "vue-router";
 
 // 不需要 export default
 const router = useRouter();
-const username = ref("seeleabd@163.com");
-const password = ref("Fanzhong1028");
+const username = ref("");
+const password = ref("");
 const agree = ref(false);
 const loading = ref(false);
 
@@ -92,12 +92,14 @@ const login = async () => {
     const token = response.data.access_token;
     localStorage.setItem("oauth_token", token);
     console.log("登录成功，获取到了访问令牌！");
-    router.push("/home"); 
+
+    // 登录成功后跳转到主页（示例）
   } catch (error) {
     const errorMessage = error.response
       ? error.response.data.error_description
       : error.message;
     console.log("登录失败: " + errorMessage);
+    router.push("/home"); //登陆失败也跳转
   } finally {
     loading.value = false; // 不论成功或失败，都要恢复按钮状态
   }
