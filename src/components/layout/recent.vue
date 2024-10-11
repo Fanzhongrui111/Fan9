@@ -1,9 +1,12 @@
 <template>
   <div>
     <img src="../../assets/4.png" />
-    <span>暂无数据</span>
+    <span>数据错误，系统维护中烫烫烫</span>
   </div>
 </template>
 
-<script setup></script>
-<style scoped></style>
+<script setup>
+</script>
+<style scoped>
+
+</style>
